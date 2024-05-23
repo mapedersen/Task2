@@ -18,11 +18,11 @@ namespace Task2
             bool exit = false;
             while (!exit)
             {
-                WriteLine("0. Exit Program");
+                WriteLine("\n0. Exit Program");
                 WriteLine("1. Go To Cinema");
                 WriteLine("2. Repeat Text 10 times");
                 WriteLine("3. Take the third word out of a sentence");
-                Write("\nAnswer: ");
+                Write("\nChoice: ");
 
                 int option = int.Parse(Console.ReadLine());
 

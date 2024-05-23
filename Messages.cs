@@ -17,8 +17,14 @@ namespace Task2
 |  `----.|  | |  |\   | |  |____ |  |  |  |  /  _____  \  
  \______||__| |__| \__| |_______||__|  |__| /__/     \__\ 
         ";
+        public static string YouthPrice = "You get the youth price: ";
+        public static string SeniorPrice = "You get the senior price: ";
+        public static string OrdinaryPrice = "You get the ordinary price: ";
 
         public static string GreetVisitor() { return "Welcome to" + TitleArt; }
+        public static string DisplayYouthPrice() { return YouthPrice; }
+        public static string DisplaySeniorPrice() { return SeniorPrice; }
+        public static string DisplayOrdinaryPrice() { return OrdinaryPrice; }
     }
 
 }

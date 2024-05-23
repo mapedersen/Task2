@@ -21,7 +21,7 @@ namespace Task2
         {
             WriteLine(Messages.GreetVisitor());
             Visitor _visitor = new Visitor();
-            
+            _visitor.TicketPrice();
         }
     }
 }
