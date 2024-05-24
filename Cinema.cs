@@ -43,7 +43,7 @@ namespace Task2
             {
                 _totalPrice += visitor.ticketPrice;
             }
-            WriteLine("The total price is: {0}kr", _totalPrice);
+            WriteLine("The total price is: {0}kr for {1} visitors", _totalPrice, _amountOfVisitors);
         }
     }
 }

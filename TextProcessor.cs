@@ -8,6 +8,7 @@ namespace Task2
 {
     internal class TextProcessor
     {
+        private string _textToRepeat;
         public void ExtractThirdWord()
         {
 
@@ -15,7 +16,13 @@ namespace Task2
 
         public void RepeatText()
         {
-
+            Console.Write("What is the text that you want to repeat 10 times?: ");
+            _textToRepeat = Console.ReadLine();
+            for (int i = 0; i < 11; i++)
+            {
+                Console.Write(_textToRepeat + ", ");
+            }
+            Console.WriteLine("\n");
         }
     }
 }
