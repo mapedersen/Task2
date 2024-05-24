@@ -11,17 +11,39 @@ namespace Task2
     {
         private Visitor _visitor;
         private Ticket _ticket;
-        
-        public Cinema() 
-        {
-              
-        }
+        private List<Visitor> _visitors;
+        private int _totalPrice;
+        private int _amountOfVisitors;
 
-        public void Enter()
+        public void SingleVisitor()
         {
             WriteLine(Messages.GreetVisitor());
-            Visitor _visitor = new Visitor();
+            Visitor _visitor = new Visitor(_amountOfVisitors);
             _visitor.TicketPrice();
         }
+
+        public void MultipleVisitors()
+        {
+            _visitors = new List<Visitor>();
+            WriteLine(Messages.GreetVisitor());
+            Write("How many visitors are going?: ");
+            _amountOfVisitors = int.Parse(Console.ReadLine());
+            for (int i = 0; i < _amountOfVisitors; i++)
+            {
+                Visitor _visitor = new Visitor(_amountOfVisitors);
+                _visitor.TicketPrice();
+                _visitors.Add(_visitor);
+            }
+            //TotalPrice();
+        }
+
+        /*public void TotalPrice()
+        {
+            foreach (var visitor in _visitors)
+            {
+                _totalPrice += _visitor.ticketPrice;
+            }
+            WriteLine("The total price is: {0}kr", _totalPrice);
+        }*/
     }
 }

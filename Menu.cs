@@ -19,7 +19,8 @@ namespace Task2
             while (!exit)
             {
                 WriteLine("\n0. Exit Program");
-                WriteLine("1. Go To Cinema");
+                WriteLine("1. Go to the cinema as a single visitor");
+                WriteLine("2. Go to the cinema as a group - multiple visitors");
                 WriteLine("2. Repeat Text 10 times");
                 WriteLine("3. Take the third word out of a sentence");
                 Write("\nChoice: ");
@@ -31,12 +32,15 @@ namespace Task2
                         exit = true;
                         break;
                     case 1:
-                        EnterCinema();
+                        SingleVisitor();
                         break;
                     case 2:
-                        RepeatText();
+                        MultipleVisitors();
                         break;
                     case 3:
+                        RepeatText();
+                        break;
+                    case 4:
                         ExtractThirdWord();
                         break;
                     default:
@@ -46,10 +50,16 @@ namespace Task2
             }
         }
 
-        private void EnterCinema()
+        private void SingleVisitor()
         {
             cinema = new Cinema();
-            cinema.Enter();
+            cinema.SingleVisitor();
+        }
+
+        private void MultipleVisitors()
+        {
+            cinema = new Cinema();
+            cinema.MultipleVisitors();
         }
 
         private void RepeatText()

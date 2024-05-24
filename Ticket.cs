@@ -20,17 +20,17 @@ namespace Task2
             if (_age < 20)
             {
                 _price = 80;
-                Console.WriteLine(Messages.DisplayYouthPrice() + _price);
+                Console.WriteLine(Messages.DisplayYouthPrice() + _price + "kr");
             }
             else if (_age > 64)
             {
                 _price = 90;
-                Console.WriteLine(Messages.DisplaySeniorPrice() + _price);
+                Console.WriteLine(Messages.DisplaySeniorPrice() + _price + "kr");
             }
             else
             {
                 _price = 120;
-                Console.WriteLine(Messages.DisplayOrdinaryPrice() + _price);
+                Console.WriteLine(Messages.DisplayOrdinaryPrice() + _price + "kr");
             }
             return _price;
         }
