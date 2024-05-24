@@ -78,6 +78,7 @@ namespace Task2
         // Initiating an instance of the TextProcessor and calls the method that extracts the third word from a sentence
         private void ExtractThirdWord()
         {
+            TextProcessor textProcessor = new TextProcessor();
             textProcessor.ExtractThirdWord();
         }
     }
