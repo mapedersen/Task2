@@ -68,12 +68,14 @@ namespace Task2
             cinema.MultipleVisitors();
         }
 
+        // Initiating an instance of the TextProcessor and calls the method that Repeats the users input on a single line
         private void RepeatText()
         {
             TextProcessor textProcessor = new TextProcessor();
             textProcessor.RepeatText();
         }
 
+        // Initiating an instance of the TextProcessor and calls the method that extracts the third word from a sentence
         private void ExtractThirdWord()
         {
             textProcessor.ExtractThirdWord();
