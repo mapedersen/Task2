@@ -39,10 +39,10 @@ namespace Task2
             return _age;
         }
 
-        public int TicketPrice()
+        public void TicketPrice()
         {
             Ticket ticket = new Ticket(_age);
-            return ticket.TicketPrice();
+            ticketPrice = ticket.TicketPrice();
         }
     }
 }

@@ -34,16 +34,16 @@ namespace Task2
                 _visitor.TicketPrice();
                 _visitors.Add(_visitor);
             }
-            //TotalPrice();
+            TotalPrice();
         }
 
-        /*public void TotalPrice()
+        public void TotalPrice()
         {
             foreach (var visitor in _visitors)
             {
-                _totalPrice += _visitor.ticketPrice;
+                _totalPrice += visitor.ticketPrice;
             }
             WriteLine("The total price is: {0}kr", _totalPrice);
-        }*/
+        }
     }
 }
