@@ -15,7 +15,10 @@ namespace Task2
 
         public void Display()
         {
+            // Sätter titel på konsolen
             Title = "Task2 - Lexicon";
+
+            // Creating a menu that displays until exit is chosen
             bool exit = false;
             while (!exit)
             {
@@ -51,12 +54,14 @@ namespace Task2
             }
         }
 
+        // Initiating an instance of cinema and calls the method that handles a single visitor
         private void SingleVisitor()
         {
             cinema = new Cinema();
             cinema.SingleVisitor();
         }
 
+        // Initiating an instance of cinema and calls the method that handles multiple visitors
         private void MultipleVisitors()
         {
             cinema = new Cinema();
