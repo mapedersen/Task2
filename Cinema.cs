@@ -20,18 +20,14 @@ namespace Task2
 
         public Visitor SingleVisitor()
         {
-            // Creates and returns a single visitor
             _visitor = _visitorManager.CreateVisitor();
-            // Displays price of single visitors ticket.
             _priceCalculator.DisplayTotalPrice(_visitor);
-            // Returns the visitor
             return _visitor;
         }
 
         public List<Visitor> MultipleVisitors()
         {
-            _visitors = new List<Visitor>();
-            _visitorManager.CreateMultipleVisitors();
+            _visitors = _visitorManager.CreateMultipleVisitors();
             _priceCalculator.DisplayTotalPrice(_visitors);
             return _visitors;
         }

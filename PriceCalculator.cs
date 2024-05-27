@@ -11,7 +11,7 @@ namespace Task2
     {
         public void DisplayTotalPrice(Visitor visitor)
         {
-            WriteLine($"Ticket price for the visitor is {visitor.Ticket.Price}");
+            WriteLine($"Ticket type for the visitor is {visitor.Ticket.TicketType} and the price is {visitor.Ticket.Price}kr");
         }
 
         public void DisplayTotalPrice(List<Visitor> visitors) 
