@@ -34,7 +34,7 @@ namespace Task2
         {
             Console.Write("What is the text that you want to repeat 10 times?: ");
             _textToRepeat = Console.ReadLine();
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Console.Write(_textToRepeat + ", ");
             }
