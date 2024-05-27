@@ -10,6 +10,7 @@ namespace Task2
     {
         public int Age { get; private set; }
         public int Price { get; private set; }
+        public string TicketType { get; private set; }
         public Ticket(int age)
         {
             Age = age;
@@ -21,14 +22,17 @@ namespace Task2
             if (Age < 20)
             {
                 Price = 80;
+                TicketType = "Youth";
             }
             else if (Age > 64)
             {
                 Price = 90;
+                TicketType = "Ordinary";
             }
             else
             {
                 Price = 120;
+                TicketType = "Senior";
             }
             return Price;
         }
