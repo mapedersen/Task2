@@ -9,42 +9,31 @@ namespace Task2
 {
     class Cinema
     {
-        private Visitor _visitor;
-        private Ticket _ticket;
-        private List<Visitor> _visitors;
-        private int _totalPrice;
-        private int _amountOfVisitors;
-        private VisitorInput _visitorInput = new VisitorInput();
+        // Private fields that belong to the cinema object
 
-        public void SingleVisitor()
+        // _ticket Represent a ticket that will belong to a unique visitor
+        private Visitor _visitor;
+        private List<Visitor> _visitors;
+        private VisitorManager _visitorManager = new VisitorManager();
+        private PriceCalculator _priceCalculator = new PriceCalculator();
+        
+
+        public Visitor SingleVisitor()
         {
-            WriteLine(Messages.GreetVisitor());
-            Visitor _visitor = new Visitor(_visitorInput, _amountOfVisitors);
-            _visitor.TicketPrice();
+            // Creates and returns a single visitor
+            _visitor = _visitorManager.CreateVisitor();
+            // Displays price of single visitors ticket.
+            _priceCalculator.DisplayTotalPrice(_visitor);
+            // Returns the visitor
+            return _visitor;
         }
 
-        public void MultipleVisitors()
+        public List<Visitor> MultipleVisitors()
         {
             _visitors = new List<Visitor>();
-            WriteLine(Messages.GreetVisitor());
-            Write("How many visitors are going?: ");
-            _amountOfVisitors = int.Parse(Console.ReadLine());
-            for (int i = 0; i < _amountOfVisitors; i++)
-            {
-                Visitor _visitor = new Visitor(_visitorInput, _amountOfVisitors);
-                _visitor.TicketPrice();
-                _visitors.Add(_visitor);
-            }
-            TotalPrice();
-        }
-
-        public void TotalPrice()
-        {
-            foreach (var visitor in _visitors)
-            {
-                _totalPrice += visitor.ticketPrice;
-            }
-            WriteLine("The total price is: {0}kr for {1} visitors", _totalPrice, _amountOfVisitors);
+            _visitorManager.CreateMultipleVisitors();
+            _priceCalculator.DisplayTotalPrice(_visitors);
+            return _visitors;
         }
     }
 }

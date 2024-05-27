@@ -11,31 +11,28 @@ namespace Task2
     public class VisitorInput
     {
         private int _age;
-        public int SetAge(int amountOfVisitors)
-        {
-            if (amountOfVisitors == 0)
-            {
-                _age = SingleVisitorAge();
-            }
-            else if (amountOfVisitors > 1)
-            {
-                _age = MultipleVisitorsAge();
-            }
-            return _age;
-        }
+        private int _amountOfVisitors;
 
         public int SingleVisitorAge()
         {
             Write("What is your age?: ");
-            _age = int.Parse(ReadLine());
-            return _age;
+            return _age = int.Parse(ReadLine());
         }
 
-        public int MultipleVisitorsAge()
+        public int GetNumberOfVisitors()
         {
-            Write("What is the age of the visitor?: ");
-            _age = int.Parse(ReadLine());
-            return _age;
+            Write("How many visitors are going?: ");
+            return int.Parse(ReadLine());
+        }
+        public List<int> GetAgesForMultipleVisitors(int numberOfVisitors)
+        {
+           List<int> ages = new List<int>();
+            for (int i = 0; i < numberOfVisitors; i++)
+            {
+                WriteLine($"What is the age of visitor {i + 1}?: ");
+                ages.Add(int.Parse(ReadLine()));
+            }
+            return ages;
         }
     }
 }

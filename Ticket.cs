@@ -8,31 +8,29 @@ namespace Task2
 {
     internal class Ticket
     {
-        private int _age;
-        private int _price;
+        public int Age { get; private set; }
+        public int Price { get; private set; }
         public Ticket(int age)
         {
-            _age = age;
+            Age = age;
+            TicketPrice();
         }
 
         public int TicketPrice()
         {
-            if (_age < 20)
+            if (Age < 20)
             {
-                _price = 80;
-                Console.WriteLine(Messages.DisplayYouthPrice() + _price + "kr");
+                Price = 80;
             }
-            else if (_age > 64)
+            else if (Age > 64)
             {
-                _price = 90;
-                Console.WriteLine(Messages.DisplaySeniorPrice() + _price + "kr");
+                Price = 90;
             }
             else
             {
-                _price = 120;
-                Console.WriteLine(Messages.DisplayOrdinaryPrice() + _price + "kr");
+                Price = 120;
             }
-            return _price;
+            return Price;
         }
 
     }

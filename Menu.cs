@@ -9,8 +9,8 @@ namespace Task2
 {
     internal class Menu
     {
-        private TextProcessor textProcessor;
-        private Cinema cinema;
+        private TextProcessor _textProcessor;
+        private Cinema _cinema;
 
 
         public void Display()
@@ -57,29 +57,29 @@ namespace Task2
         // Initiating an instance of cinema and calls the method that handles a single visitor
         private void SingleVisitor()
         {
-            cinema = new Cinema();
-            cinema.SingleVisitor();
+            _cinema = new Cinema();
+            _cinema.SingleVisitor();
         }
 
         // Initiating an instance of cinema and calls the method that handles multiple visitors
         private void MultipleVisitors()
         {
-            cinema = new Cinema();
-            cinema.MultipleVisitors();
+            _cinema = new Cinema();
+            _cinema.MultipleVisitors();
         }
 
         // Initiating an instance of the TextProcessor and calls the method that Repeats the users input on a single line
         private void RepeatText()
         {
-            TextProcessor textProcessor = new TextProcessor();
-            textProcessor.RepeatText();
+            _textProcessor = new TextProcessor();
+            _textProcessor.RepeatText();
         }
 
         // Initiating an instance of the TextProcessor and calls the method that extracts the third word from a sentence
         private void ExtractThirdWord()
         {
-            TextProcessor textProcessor = new TextProcessor();
-            textProcessor.ExtractThirdWord();
+            _textProcessor = new TextProcessor();
+            _textProcessor.ExtractThirdWord();
         }
     }
 }

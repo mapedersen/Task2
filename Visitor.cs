@@ -9,19 +9,14 @@ namespace Task2
 {
     internal class Visitor
     {
-        private int _age;
-        private Ticket _ticket;
-        public int ticketPrice;
+        public int Age { get; }
+        public Ticket Ticket { get; set; }
 
-        public Visitor(VisitorInput input, int amountOfVisitors)
+        public Visitor(int age)
         {
-            _age = input.SetAge(amountOfVisitors);
+            Age = age;
+            Ticket = new Ticket(age);
         }
 
-        public void TicketPrice()
-        {
-            Ticket ticket = new Ticket(_age);
-            ticketPrice = ticket.TicketPrice();
-        }
     }
 }
