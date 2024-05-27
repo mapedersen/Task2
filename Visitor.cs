@@ -13,9 +13,8 @@ namespace Task2
         private Ticket _ticket;
         public int ticketPrice;
 
-        public Visitor(int amountOfVisitors)
+        public Visitor(VisitorInput input, int amountOfVisitors)
         {
-            VisitorInput input = new VisitorInput();
             _age = input.SetAge(amountOfVisitors);
         }
 

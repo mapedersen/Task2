@@ -14,11 +14,12 @@ namespace Task2
         private List<Visitor> _visitors;
         private int _totalPrice;
         private int _amountOfVisitors;
+        private VisitorInput _visitorInput = new VisitorInput();
 
         public void SingleVisitor()
         {
             WriteLine(Messages.GreetVisitor());
-            Visitor _visitor = new Visitor(_amountOfVisitors);
+            Visitor _visitor = new Visitor(_visitorInput, _amountOfVisitors);
             _visitor.TicketPrice();
         }
 
@@ -30,7 +31,7 @@ namespace Task2
             _amountOfVisitors = int.Parse(Console.ReadLine());
             for (int i = 0; i < _amountOfVisitors; i++)
             {
-                Visitor _visitor = new Visitor(_amountOfVisitors);
+                Visitor _visitor = new Visitor(_visitorInput, _amountOfVisitors);
                 _visitor.TicketPrice();
                 _visitors.Add(_visitor);
             }
