@@ -13,30 +13,10 @@ namespace Task2
         private Ticket _ticket;
         public int ticketPrice;
 
-        public Visitor(int amount)
+        public Visitor(int amountOfVisitors)
         {
-            if (amount == 0)
-            {
-            _age = SingleVisitorAge();
-            }
-            else if (amount > 1)
-            {
-                _age = MultipleVisitorsAge();
-            }
-        }
-
-        private int SingleVisitorAge() 
-        {
-            Write("What is your age?: ");
-            _age = int.Parse(ReadLine());
-            return _age;
-        }
-
-        private int MultipleVisitorsAge()
-        {
-            Write("What is the age of the visitor?: ");
-            _age = int.Parse(ReadLine());
-            return _age;
+            VisitorInput input = new VisitorInput();
+            _age = input.SetAge(amountOfVisitors);
         }
 
         public void TicketPrice()
